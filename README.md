@@ -1,1 +1,2 @@
 # QT_OSG_VIEWER
+QT5 osg3.6 CAD Viewer
