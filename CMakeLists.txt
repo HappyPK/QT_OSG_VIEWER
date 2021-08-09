@@ -71,8 +71,6 @@ ENDMACRO(SOURCE_GROUP_BY_DIR)
 
 add_subdirectory(src/Proj_1)
 
- 
-
 
 
 
