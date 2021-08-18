@@ -17,14 +17,53 @@
    <widget class="QPushButton" name="closeMainWindow">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>180</y>
+      <x>10</x>
+      <y>10</y>
       <width>75</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
      <string>关闭主窗口</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="hungryButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>hungry</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="loopBtn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="curTime">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>82</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
     </property>
    </widget>
   </widget>

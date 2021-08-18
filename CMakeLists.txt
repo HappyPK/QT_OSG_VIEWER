@@ -43,6 +43,8 @@ message("${BIN_DIR}")
 
 LINK_DIRECTORIES(${BIN_DIR})
 
+SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup") 
+
 # ------------------------------------------------------------------------------
 # OpenMP - used in voxel algorithm
 # ------------------------------------------------------------------------------
