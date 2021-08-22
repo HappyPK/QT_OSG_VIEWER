@@ -6,58 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>779</width>
-    <height>465</height>
+    <width>208</width>
+    <height>328</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="closeMainWindow">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>关闭主窗口</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="hungryButton">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>hungry</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="loopBtn">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>开始</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="curTime">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>82</y>
+      <x>110</x>
+      <y>50</y>
       <width>91</width>
       <height>20</height>
      </rect>
@@ -66,6 +27,59 @@
      <string>TextLabel</string>
     </property>
    </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>92</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QPushButton" name="closeMainWindow">
+     <property name="text">
+      <string>关闭主窗口</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="loopBtn">
+     <property name="text">
+      <string>开始</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="moveWinButton">
+     <property name="text">
+      <string>移动窗口</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="getWinPosBtn">
+     <property name="text">
+      <string>获取位置信息</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="setWinPosBtn">
+     <property name="text">
+      <string>修改位置和尺寸</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ModeDialog">
+     <property name="text">
+      <string>显示模态对话框</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="msgBtn">
+     <property name="text">
+      <string>Message</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="fileDialogBtn">
+     <property name="text">
+      <string>文件</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QMenuBar" name="menuBar">
@@ -73,7 +87,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>779</width>
+     <width>208</width>
      <height>23</height>
     </rect>
    </property>

@@ -2,11 +2,9 @@
 
 #include <QtWidgets/QMainWindow>
 #include "ui_MainWindow.h"
-#include "testWindow.h"
-#include "me.h"
+
 
 #include <Qtimer>
-#include <Qtime>
 
 class MainWindow : public QMainWindow
 {
@@ -16,16 +14,20 @@ public:
     MainWindow(QWidget *parent = Q_NULLPTR);
     ~MainWindow();
 
-    void hungrySlot();
-
-    void eatSlot();
-
     void timeSlot();
+    void showTime();
 
+private slots:
+    void on_moveWinButton_clicked();
+    void on_getWinPosBtn_clicked();
+    void on_setWinPosBtn_clicked();
+    void on_ModeDialog_clicked();
+    void on_msgBtn_clicked();
+    void on_fileDialogBtn_clicked();
+
+    void customContextMenuRequestedSlot(const QPoint& pos);
 private:
     Ui::MainWindow *ui;
-    Me* m_me;
-    testWindow* m_girlfriend;
     QTimer* m_timer;
 
 };
