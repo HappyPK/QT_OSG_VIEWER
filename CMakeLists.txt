@@ -71,7 +71,7 @@ MACRO(SOURCE_GROUP_BY_DIR source_files)
     endif(MSVC)
 ENDMACRO(SOURCE_GROUP_BY_DIR)
 
-add_subdirectory(src/Proj_1)
+add_subdirectory(src)
 
 
 
