@@ -11,6 +11,7 @@ find_package(Qt5 COMPONENTS Core Gui Qml Widgets  Quick REQUIRED)
 INCLUDE_DIRECTORIES(
 	./UI
 	./UI/mainwindow
+	./Utilits
 	.
 )
 
@@ -35,12 +36,23 @@ FILE(GLOB UI_FILES ${UI_FILES}
 qt5_wrap_ui(WRAP_FILES ${UI_FILES})
 set(RCC_FILES *.qrc)
 source_group("Ui" FILES ${UI_FILES} ${WRAP_FILES} )
+source_group("UI" FILES 
+${PROJECT_Res_FILES} 
+${PROJECT_MAINWINDOW_FILES})
+
+FILE(GLOB PROJECT_UTILS_FILES ${PROJECT_UTILS_FILES}
+	./Utilits/*.cpp
+	./Utilits/*.h
+    )
+source_group("Utilits" FILES ${PROJECT_UTILS_FILES})
 
 ADD_EXECUTABLE(${PROJECT_NAME} 
 ${PROJECT_SOURCE_FILES} 
 ${PROJECT_Res_FILES} 
 ${PROJECT_MAINWINDOW_FILES} 
-${WRAP_FILES})
+${WRAP_FILES}
+${PROJECT_UTILS_FILES})
+
 SET(EXECUTABLE_OUTPUT_PATH ${BIN_DIR})
 target_link_libraries(${PROJECT_NAME}  Qt5::Core Qt5::Gui Qt5::Qml Qt5::Quick Qt5::Widgets )
 

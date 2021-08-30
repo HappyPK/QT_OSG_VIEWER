@@ -1,9 +1,16 @@
 #pragma once
+#pragma execution_character_set("utf-8") 
 
 #include <QtWidgets/QMainWindow>
 #include "ui_MainWindow.h"
-
-#include <Qtimer>
+#include "utils.h"
+#include <Qdebug>
+#include <QTime>
+#include <QTimer>
+#include <QAction>
+#include <QMessageBox>
+#include <QFileDialog>
+#include <QProgressbar>
 
 class MainWindow : public QMainWindow
 {
@@ -17,7 +24,8 @@ private slots:
     
 private:
     void exitApp();
+    void openFile();
 
 private:
-    Ui::MainWindow *ui;
+    std::unique_ptr<Ui::MainWindow> pUi;
 };

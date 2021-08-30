@@ -1,21 +1,23 @@
 #include "MainWindow.h"
-#include <Qdebug>
-#include <QTime>
-#include <QAction>
-#include <QMessageBox>
-#include <QFileDialog>
-#include <QProgressbar>
+
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow)
+    : QMainWindow(parent), pUi(std::make_unique<Ui::MainWindow>())
 {
-    ui->setupUi(this);
-    connect(ui->actionexit, &QAction::triggered, this, &MainWindow::exitApp);
+    pUi->setupUi(this);
+    connect(pUi->actionexit, &QAction::triggered, this, &MainWindow::exitApp);
+    connect(pUi->actionopen, &QAction::triggered, this, &MainWindow::openFile);
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+
+}
+
+void MainWindow::openFile()
+{
+    QString filedir = QFileDialog::getExistingDirectory(nullptr, "打开", "./");
+    QMessageBox::information(nullptr, "打开文件夹",filedir,QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
 }
 
 void MainWindow::exitApp()
